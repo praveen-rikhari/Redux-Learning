@@ -7,7 +7,7 @@ const QuoteSlice = createSlice({
     },
     reducers: {
         setQuote: (state, action) => {
-            state.action = action.payload;
+            state.text = action.payload;
         },
     },
 });

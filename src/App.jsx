@@ -3,7 +3,8 @@ import ReduxImage from './assets/redux.svg';
 import ReactImage from './assets/react.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { decrement, increment, incrementByAmount } from './reducer/counterSlice';
-import './App.css'
+import './App.css';
+import DisplayQuote from './DisplayQuote';
 
 function App() {
   const dispatch = useDispatch();
@@ -36,6 +37,9 @@ function App() {
       <button onClick={() => dispatch(incrementByAmount(amount))}>
         + {amount}
       </button>
+
+      <br /><br />
+      <DisplayQuote />
     </div>
   )
 }

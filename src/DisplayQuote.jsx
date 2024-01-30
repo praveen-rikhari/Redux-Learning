@@ -8,16 +8,16 @@ function DisplayQuote() {
     const quoteText = useSelector((state) => state.quote.text);
 
     const fetchRandomQuote = () => {
-        axios
-            .get('https://api.quotable.io/random')
-            .then((res) => {
-                const randomQuote = res.data.content;
+        axios.get('https://api.quotable.io/random')
+            .then(response => {
+                const randomQuote = response.data.content;
                 dispatch(setQuote(randomQuote));
             })
-            .catch((err) => {
-                console.error("Error while fetching : ", err);
-            })
-    }
+            .catch(error => {
+                console.error("Error while fetching: ", error);
+            });
+    };
+
 
     useEffect(() => {
         fetchRandomQuote();
@@ -25,6 +25,7 @@ function DisplayQuote() {
 
     return (
         <div>
+            <button onClick={fetchRandomQuote}>Get Random Quote</button>
             <h1>Random Quote : </h1>
             <p>{quoteText}</p>
         </div>
