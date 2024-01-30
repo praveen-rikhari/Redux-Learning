@@ -35,5 +35,21 @@ h1{
   color:#004980;
 }
 
+h2{
+  font-size: 33px;
+}
 
+span{
+  color: red;
+}
+
+input{
+  padding: 5px 15px;
+}
+
+button{
+  padding: 5px 15px;
+  margin: 0 20px;
+  font-size: 30px;
+}
 
