@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const CalculatorSlice = createSlice({
     name: 'calculator',
     initialState: {
-        result: 0,
+        result: null,
     },
     reducers: {
         setResult: (state, action) => {
-            state.result = action.payload
+            state.result = action.payload;
         },
     },
 });
