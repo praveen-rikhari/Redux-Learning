@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { decrement, increment, incrementByAmount } from './reducer/counterSlice';
 import './App.css';
 import DisplayQuote from './DisplayQuote';
+import Calculator from './Calculator';
 
 function App() {
   const dispatch = useDispatch();
@@ -40,6 +41,9 @@ function App() {
 
       <br /><br />
       <DisplayQuote />
+
+      <br /><br />
+      <Calculator />
     </div>
   )
 }
